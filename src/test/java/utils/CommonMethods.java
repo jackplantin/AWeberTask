@@ -101,15 +101,15 @@ public class CommonMethods extends PageInitializer {
 
     }
 
-    public static String generateRandomstring(String username) {
+    public static String generateRandomstring(String string) {
         int length = 10;
         boolean useLetters = true;
         boolean useNumbers = true;
         String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
 
-        username = generatedString;
+        string = generatedString;
 
-        return username;
+        return string;
     }
 
         private static JavascriptExecutor getJSExecutor() {

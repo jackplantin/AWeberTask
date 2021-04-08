@@ -48,13 +48,7 @@ public class BaseClass {
      *
      * @param url
      */
-    public static void setUpWithSpecificUrl(String url) {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get(url);
-        driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
+
 
     /**
      * This method will close any open browser
