@@ -10,9 +10,6 @@ public class Constants {
 
    public static final int EXPLICIT_WAIT = 10;
 
-   public static final String HRMS_EXCEL_DATA_PATH = System.getProperty("user.dir") + "/src/test/resources/testdata/hrmsData.xlsx";
-
-   public static final String TEST_PUPPY_PHOTO_PATH = System.getProperty("user.dir") + "/src/test/resources/photos/Heart boy 3.jpg";
 
 
 
