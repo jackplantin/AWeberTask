@@ -1,10 +1,11 @@
 package stepdefinitions;
 
-import com.hrms.testbase.BaseClass;
-import com.hrms.utils.CommonMethods;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import testbase.BaseClass;
+import utils.CommonMethods;
 
 public class Hooks {
     //annotation based functions via cucumber

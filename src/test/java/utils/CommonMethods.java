@@ -1,11 +1,11 @@
 package utils;
 
 
-import com.hrms.testbase.PageInitializer;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
+import testbase.PageInitializer;
 
 import java.io.File;
 import java.io.IOException;
