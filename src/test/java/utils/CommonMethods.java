@@ -51,6 +51,15 @@ public class CommonMethods extends PageInitializer {
     }
 
     /**
+     * This method will wait for an element to be clickable before clicking
+     *
+     * @param xpath expression
+     */
+    public static void waitForVisibility(String xpath) {
+        getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+    }
+
+    /**
      * This method will wait until element is clickable, then click
      *
      * @param element

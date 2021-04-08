@@ -1,8 +1,10 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.CommonMethods;
 
 public class ProfilePage extends CommonMethods {
@@ -21,18 +23,11 @@ public class ProfilePage extends CommonMethods {
 
     //This is the button to save details
     @FindBy(xpath = "//button[text() ='Save profile details']")
-    public WebElement continueButton;
+    public WebElement saveProfileDetailsButton;
 
     //This element shows that we have saved information successfully
     @FindBy(xpath = "//span[contains(text(), 'success')]")
     public WebElement successMessage;
-
-    public static void clearAllFields() {
-        profilePage.firstNameField.clear();
-        profilePage.lastNameField.clear();
-        profilePage.descriptionField.clear();
-    }
-
 
 
     public ProfilePage() {
@@ -40,22 +35,10 @@ public class ProfilePage extends CommonMethods {
     }
 
     public static void enterAllFields(String firstN, String lastN, String description) {
-        profilePage.firstNameField.sendKeys(firstN);
-        profilePage.lastNameField.sendKeys(lastN);
-        profilePage.descriptionField.sendKeys(description);
+        sendText(profilePage.firstNameField, firstN);
+        sendText(profilePage.lastNameField, lastN);
+        sendText(profilePage.descriptionField, description);
     }
 
-    public boolean allFieldsAreEmpty() {
 
-        boolean allFieldsEmpty = false;
-
-        if (profilePage.firstNameField.getText().isEmpty()) {
-            if (profilePage.lastNameField.getText().isEmpty()) {
-                if(profilePage.descriptionField.getText().isEmpty()) {
-                    allFieldsEmpty = true;
-                }
-            }
-        }
-        return allFieldsEmpty;
-    }
 }
